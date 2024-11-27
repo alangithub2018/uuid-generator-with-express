@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Generador de UUID</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Identificador único universal (UUID)</h1>
+      <br />
+      <button onclick="getUuid()">Generar</button>
+      <h4 id="result"></h4>
+    </div>
+  </body>
+
+  <script>
+    const getUuid = async () => {
+      try {
+        let url = await fetch("http://localhost/api/get-uuid");
+        let response = await url.text();
+        document.getElementById("result").innerHTML = response;
+      } catch (error) {
+        document.getElementById("result").innerHTML = `Error: ${error}`;
+      }
+    };
+  </script>
+</html>
