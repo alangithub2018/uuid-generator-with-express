@@ -1,5 +1,7 @@
 # Simple API using express by NodeJS
 
+![Node.js](https://nodejs.org/static/images/logo.svg) ![Express](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)
+
 this is a very simple api using express, final purpose is to deploy it to aws
 
 ## Steps for completion
