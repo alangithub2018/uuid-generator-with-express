@@ -4,10 +4,14 @@ const helmet = require("helmet");
 const compression = require("compression");
 require("dotenv").config();
 const { v4: uuidv4 } = require("uuid");
+const cors = require("cors");
 
 const app = express();
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(compression());
+
+// make sure to specify which domain can access the API adding options to the cors function
+app.use(cors());
 
 const serverHttp = http.createServer(app);
 serverHttp.listen(process.env.HTTP_PORT, process.env.IP);
