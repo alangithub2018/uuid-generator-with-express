@@ -16,7 +16,7 @@
   <script>
     const getUuid = async () => {
       try {
-        let url = await fetch("http://www.innovastampfava.com/api/get-uuid");
+        let url = await fetch("https://www.innovastampfava.com/api/get-uuid");
         let response = await url.text();
         document.getElementById("result").innerHTML = response;
       } catch (error) {
