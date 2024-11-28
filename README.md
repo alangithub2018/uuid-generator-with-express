@@ -17,7 +17,7 @@ npm i helmet
 npm i uuid
 ```
 
-2. Configure your environment variables as follow
+2. Configure your environment variables as follows
 
 ```
 NODE_ENV=development
@@ -47,4 +47,25 @@ app.use(compression());
 
 ```
 app.use(express.static("public"));
+```
+
+6. SSL/TLS local certificate for development
+
+   - Setup needed configuration to specify certificate location files
+
+```
+KEY_PATH=your_path.key
+CERT_PATH=your_path.crt
+```
+
+    - Install `fs` node package to be able to read the files content
+
+```
+npm i fs
+```
+
+    - Adding dependency to your js file
+
+```
+const fs = require('fs');
 ```
